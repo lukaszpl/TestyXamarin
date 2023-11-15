@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestyXamarin.View.LearnModePages.LearnModeResultsPage" Title="Wynik"
+             xmlns:local="clr-namespace:TestyXamarin.View;assembly=TestyXamarin">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label x:Name="Result_label" Text="Twój wynik:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large" FontAttributes="Bold"/>
+            <ListView x:Name="Results_listView" SelectionMode="None" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Question}" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+                                <Image Source="{Binding QuestionImageSource, Mode=TwoWay}" Margin="10"/>
+                                <StackLayout  BindableLayout.ItemsSource="{Binding Answers}" VerticalOptions="Center"  >
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Orientation="Horizontal" BackgroundColor="{Binding AnswerColor, Mode=TwoWay}">
+                                                <CheckBox IsChecked="{Binding userAnswer}" IsEnabled="False"/>
+                                                <Label Text="{Binding Answer}" FontSize="Default" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

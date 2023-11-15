@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestyXamarin.MainPage" Title="Aplikacja Twoje Testy">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Secondary" Text="Ustawienia" Clicked="ToolbarSettingsItem_Clicked"/>
+        <ToolbarItem Order="Secondary" Text="O programie" Clicked="ToolbarAboutItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label x:Name="MainText_label" Text="Witaj w aplikacji Twoje Testy!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Image x:Name="MainImage_Image" Source=""/>
+        <Label x:Name="State_label" Text="Status aplikacji: " FontSize="Title" Padding="30,10,30,10" HorizontalOptions="Center"/>
+        <Label x:Name="Info_label" Text="" FontSize="16" Padding="30,0,30,0" HorizontalTextAlignment="Center"/>
+        <Button x:Name="StartLearn_button" Text="Tryb nauki" HeightRequest="100" Clicked="StartLearn_button_Clicked"/>
+        <Button x:Name="StartExam_button" Text="Uruchom egzamin" HeightRequest="100" Clicked="StartExam_button_Clicked"/>
+    </StackLayout>
+</ContentPage>

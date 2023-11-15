@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestyXamarin.View.SettingsPage" Title="Ustawienia">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Adres do pliku bazy:" Margin="15,10,10,10"/>
+            <Editor x:Name="DownloadLink_editor" Text="https://lukaszsoroczynski.com/xamarin/main.php" Margin="10,10,10,10"/>
+            <Label Text="UserToken (pole wymagane dla trybu egzaminu):" Margin="15,10,10,10"/>
+            <Editor x:Name="UserToken_editor" Text="testToken" Margin="10,10,10,10"/>
+            <Label 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="Save_button" Text="Zapisz" Clicked="Save_button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
